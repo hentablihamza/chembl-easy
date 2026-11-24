@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: chembl-easy
+message: If you use this software, please cite it using the metadata below.
+type: software
+authors:
+  - family-names: Hentabli
+    given-names: Hamza
+    orcid: https://orcid.org/0000-0002-9530-2815
+repository-code: https://github.com/hentablihamza/chembl-easy
+url: https://github.com/hentablihamza/chembl-easy
+abstract: >
+  Search ChEMBL and download clean, ML-ready bioactivity data. A retrying,
+  caching, paginating client for the ChEMBL REST API with target resolution
+  (gene symbol, UniProt accession, ChEMBL ID), server-side activity filters,
+  assay confidence and data-quality filtering, unit harmonization to nM and
+  p-scale, per-compound aggregation with variance flags, and compound search by
+  name, similarity and substructure.
+keywords:
+  - ChEMBL
+  - cheminformatics
+  - drug discovery
+  - QSAR
+  - bioactivity
+  - RDKit
+  - machine learning
+version: 0.1.0
+date-released: "2026-11-24"
+references:
+  - type: article
+    title: "ChEMBL: towards direct deposition of bioassay data"
+    authors:
+      - family-names: Mendez
+        given-names: David
+    journal: Nucleic Acids Research
+    year: 2019
+    volume: 47
+    issue: D1
+    start: D930
+    end: D940
+    doi: 10.1093/nar/gky1075

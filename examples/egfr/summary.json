@@ -1,0 +1,61 @@
+{
+  "target_chembl_id": "CHEMBL203",
+  "pref_name": "Epidermal growth factor receptor",
+  "target_type": "SINGLE PROTEIN",
+  "organism": "Homo sapiens",
+  "chembl_release": "ChEMBL_37",
+  "activity_records": 8288,
+  "compounds": 6871,
+  "high_variance_compounds": 199,
+  "p_activity_median": 7.05,
+  "p_activity_min": 4.0,
+  "p_activity_max": 11.0,
+  "actives_p_ge_6": 5297,
+  "actives_p_ge_7": 3562,
+  "standard_units_in_raw": {
+    "nM": 8258,
+    "ug.mL-1": 23,
+    "/uM": 6,
+    "10^3 uM": 1
+  },
+  "funnel": [
+    [
+      "Server-side match (type/relation/assay type)",
+      18454
+    ],
+    [
+      "Downloaded",
+      18454
+    ],
+    [
+      "Without curator data-validity flags",
+      18189
+    ],
+    [
+      "Without potential duplicates",
+      16165
+    ],
+    [
+      "Wild-type assays only (no variant/mutant)",
+      12352
+    ],
+    [
+      "Assay confidence score >= 9",
+      8297
+    ],
+    [
+      "With a structure (SMILES)",
+      8288
+    ],
+    [
+      "Convertible to p-scale (pIC50/pKi/...)",
+      8257
+    ],
+    [
+      "Unique parent compounds",
+      6871
+    ]
+  ],
+  "http_requests": 1,
+  "cache_hits": 28
+}

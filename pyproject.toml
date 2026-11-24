@@ -1,0 +1,77 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chembl-easy"
+version = "0.1.0"
+description = "Search ChEMBL and download clean, ML-ready bioactivity data: retries, caching, pagination, target resolution, unit harmonization and deduplication"
+readme = "README.md"
+authors = [
+    { name = "Hamza Hentabli" },
+]
+requires-python = ">=3.10"
+keywords = [
+    "chembl",
+    "cheminformatics",
+    "drug-discovery",
+    "qsar",
+    "bioactivity",
+    "rdkit",
+    "machine-learning",
+    "computational-chemistry",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "requests>=2.28",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "rdkit>=2023.9.1",
+]
+
+[project.optional-dependencies]
+parquet = [
+    "pyarrow>=12",
+]
+dev = [
+    "pytest>=7.0",
+    "pyarrow>=12",
+]
+
+[project.urls]
+Homepage = "https://github.com/hentablihamza/chembl-easy"
+Repository = "https://github.com/hentablihamza/chembl-easy"
+Issues = "https://github.com/hentablihamza/chembl-easy/issues"
+
+[project.scripts]
+chembl-easy = "chembl_easy.cli:main"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/chembl_easy",
+    "tests",
+    "examples",
+    "docs",
+    "README.md",
+    "CITATION.cff",
+    "environment.yml",
+    "pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "network: hits the live ChEMBL API (skipped unless CHEMBL_EASY_NETWORK_TESTS=1)",
+]
